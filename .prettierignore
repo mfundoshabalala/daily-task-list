@@ -1,0 +1,7 @@
+.eslintrc
+.prettierrc
+.history
+.env
+.next
+.idea
+node_modules

@@ -1,0 +1,66 @@
+{
+	"env": {
+		"jest/globals": true
+	},
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 12,
+		"project": "./tsconfig.json",
+		"sourceType": "module"
+	},
+	"parser": "@typescript-eslint/parser",
+	"extends": [
+		"plugin:jest/recommended",
+		"plugin:jest/style",
+		"plugin:@typescript-eslint/recommended",
+		"airbnb-typescript",
+		"next",
+		"prettier",
+		"next/core-web-vitals"
+	],
+	"plugins": [
+		"@typescript-eslint",
+		"jest"
+	],
+	"rules": {
+		"import/no-extraneous-dependencies": [
+			"error",
+			{
+				"devDependencies": true
+			}
+		],
+		"@typescript-eslint/no-explicit-any": "error",
+		"@typescript-eslint/no-unused-vars": "error",
+		"global-require": "off",
+		"jest/no-disabled-tests": "warn",
+		"jest/no-focused-tests": "error",
+		"jest/no-identical-title": "error",
+		"jest/prefer-to-have-length": "warn",
+		"jest/valid-expect": "error",
+		"react/jsx-props-no-spreading": "off",
+		"@typescript-eslint/no-var-requires": "off",
+		"react/jsx-filename-extension": [
+			1,
+			{
+				"extensions": [
+					".jsx",
+					".tsx",
+					".js",
+					".ts"
+				]
+			}
+		],
+		"import/extensions": [
+			"error",
+			"ignorePackages",
+			{
+				"js": "never",
+				"jsx": "never",
+				"ts": "never",
+				"tsx": "never"
+			}
+		]
+	}
+}
