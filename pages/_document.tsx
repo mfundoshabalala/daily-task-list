@@ -10,11 +10,10 @@ import { JSXElementConstructor, ReactElement, ReactFragment } from 'react';
 class MyDocument extends Document {
 	static async getInitialProps(ctx: DocumentContext): Promise<{
 		html: string;
-		head?: (JSX.Element | null)[] | undefined;
+		head?: (JSX.Element | null)[];
 		styles?:
 			| ReactElement<unknown, string | JSXElementConstructor<unknown>>[]
-			| ReactFragment
-			| undefined;
+			| ReactFragment;
 	}> {
 		const initialProps = await Document.getInitialProps(ctx);
 		return { ...initialProps };
