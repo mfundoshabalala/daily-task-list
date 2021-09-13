@@ -14,7 +14,10 @@
 		"lint:fix": "eslint . --ext ts --ext tsx --ext js --fix",
 		"test": "jest --env=jsdom --passWithNoTests",
 		"test:watch": "jest --watch",
-		"test-all": "npm run lint && npm run type-check && npm run test"
+		"test-all": "npm run lint && npm run type-check && npm run test",
+		"optimize-svg": "rimraf ./public/icons/min && svgo -f ./public/icons -o ./public/icons/min",
+		"generate-sprite": "rimraf ./public/sprite.svg && svg-sprite-generate -d ./public/icons/min -o ./public/sprite.svg",
+		"optimize-generate": "npm run optimize-svg && npm run generate-sprite"
 	},
 	"husky": {
 		"hooks": {
