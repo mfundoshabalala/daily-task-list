@@ -10,7 +10,7 @@ const TodoList: React.FunctionComponent = () => {
 	const todos = useSelector((state: RootState) => state.todos);
 
 	return (
-		<ul className="">
+		<ul className="flex flex-col items-center w-full gap-2 px-4">
 			{mounted && _.map(todos, (todo) => <TodoItem key={todo.taskId} todo={todo} />)}
 		</ul>
 	);
