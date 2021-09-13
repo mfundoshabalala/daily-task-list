@@ -12,21 +12,42 @@ const TodoHeader: React.FC = () => {
 	}
 
 	function handleTodoSubmit() {
-		dispatch(saveTodo(textValue));
-		setTextValue('');
+		if (textValue) {
+			dispatch(saveTodo(textValue));
+			setTextValue('');
+		}
 	}
 
 	return (
 		<>
 			<h1 className="text-4xl font-bold">Daily Task List</h1>
-			<form action="" className="flex gap-2">
-				<input type="text" value={textValue} onChange={handleInputChange} />
+			<form action="" className="relative flex items-center w-[400px] gap-4">
+				<input
+					type="text"
+					value={textValue}
+					className="w-full pl-5 pr-12 text-base border border-gray-400 rounded"
+					placeholder="What is your task?"
+					onChange={handleInputChange}
+				/>
 				<button
 					type="button"
-					className="px-3 py-0 text-white bg-gray-600 rounded-sm"
+					className=" absolute right-[1px] grid w-10 h-10 top-[1px] text-white align-middle bg-blue-600 border rounded border-gray-50 hover:bg-blue-800 place-items-center"
 					onClick={handleTodoSubmit}
 				>
-					Add Todo
+					<svg
+						className="w-6 h-6"
+						fill="none"
+						stroke="currentColor"
+						viewBox="0 0 24 24"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							strokeLinecap="round"
+							strokeLinejoin="round"
+							strokeWidth={2}
+							d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+						/>
+					</svg>
 				</button>
 			</form>
 		</>
