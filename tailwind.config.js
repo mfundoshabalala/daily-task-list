@@ -6,7 +6,7 @@ module.exports = {
 		'./public/**/*.html',
 		'./{components,pages,lib,hooks}/**/*.{js,ts,jsx,tsx}',
 	],
-	darkMode: "class", // or 'media' or 'class'
+	darkMode: 'class', // or 'media' or 'class'
 	theme: {
 		extend: {
 			colors: {
@@ -19,5 +19,8 @@ module.exports = {
 		caretColor: ['dark', 'active'],
 		extend: {},
 	},
-	plugins: [require('@tailwindcss/forms'), require('@graxmonzo/tailwind-caret-color')],
+	plugins: [
+		require('@tailwindcss/forms'),
+		require('@graxmonzo/tailwind-caret-color'),
+	],
 };
