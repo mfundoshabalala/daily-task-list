@@ -1,13 +1,19 @@
-const Button: React.FC = (props) => {
-	const { children } = props;
-	return (
-		<div
-			data-testid="button"
-			className="px-6 py-2 text-white bg-gray-600 rounded-none max-w-max whitespace-nowrap"
-		>
-			{children}
-		</div>
-	);
-};
+interface ButtonProps {
+	title: string;
+	onClick: () => void;
+	className?: string;
+	disabled?: boolean;
+	type?: 'button' | 'submit' | 'reset';
+}
+
+const Button: React.FC<ButtonProps> = ({ title, onClick }) => (
+	<button
+		type="button"
+		onClick={onClick}
+		className="px-2 py-1 text-sm font-light border rounded"
+	>
+		{title}
+	</button>
+);
 
 export default Button;
