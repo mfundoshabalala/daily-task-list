@@ -29,9 +29,9 @@ const TodoItem: React.FC<TodoProps> = ({ todo }) => {
 	}
 
 	return (
-		<li>
-			<p className="">{task}</p>
-			<div className="flex gap-2">
+		<li className="flex justify-between w-full gap-2 min-h-[50px] max-w-md px-4 py-2 border rounded border-gray-400 font-light">
+			<p className="capitalize">{task}</p>
+			<div className="flex items-end gap-2">
 				<Button title="Delete" onClick={() => handleDeleteTodo(taskId)} />
 				<Button title="Update" onClick={() => handleUpdateTodo(taskId, task)} />
 				<Button title="Complete" onClick={() => handleCompleteTodo(taskId)} />
