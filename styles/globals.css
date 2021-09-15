@@ -4,18 +4,24 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-	font-family: 'Product Sans';
-	src: url('/fonts/Product-Sans/Product Sans Regular.ttf');
-	font-style: normal;
-	font-weight: 400;
-	font-display: swap;
-}
+@layer base {
+	q {
+		quotes: "“" "”" "‘" "’";
+	}
 
-@font-face {
-	font-family: 'Product Sans';
-	src: url('/fonts/Product-Sans/Product Sans Bold.ttf');
-	font-style: normal;
-	font-weight: 600;
-	font-display: swap;
+	@font-face {
+		font-family: 'Product Sans';
+		src: url('/fonts/Product-Sans/Product Sans Regular.ttf');
+		font-style: normal;
+		font-weight: 400;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Product Sans';
+		src: url('/fonts/Product-Sans/Product Sans Bold.ttf');
+		font-style: normal;
+		font-weight: 600;
+		font-display: swap;
+	}
 }
