@@ -11,7 +11,10 @@ const TodoList: React.FunctionComponent = () => {
 
 	return (
 		<ul className="flex flex-col items-center w-full gap-4 px-4">
-			{mounted && _.map(todos, (todo) => <TodoItem key={todo.taskId} todo={todo} />)}
+			{mounted &&
+				todos &&
+				_.map(todos, (todo) => <TodoItem key={todo?.taskId} todo={todo} />)}
+			{mounted && !todos.toString() && <p className="text-center">No todos</p>}
 		</ul>
 	);
 };
