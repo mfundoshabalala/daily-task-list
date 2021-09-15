@@ -3,7 +3,7 @@ import fetcher from 'lib/fetcher';
 
 const useFetchData = (): { data: DailyQuote | undefined; error: undefined } => {
 	const { data, error } = useSWR<DailyQuote>(
-		'http://quotes.rest/qod.json?category=inspire',
+		'https://quotes.rest/qod.json?category=inspire',
 		fetcher
 	);
 
