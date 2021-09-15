@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 const Footer: React.FC = () => (
-	<footer className="">
+	<footer className="px-2 py-2">
 		<span className="relative flex gap-2">
 			<Image
 				src="https://theysaidso.com/branding/theysaidso.png"
