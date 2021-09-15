@@ -19,38 +19,32 @@ const TodoHeader: React.FC = () => {
 	}
 
 	return (
-		<>
-			<h1 className="text-4xl font-bold">Daily Task List</h1>
-			<form action="" className="relative flex items-center w-[400px] gap-4">
+		<div className="flex flex-col items-center w-full gap-8 py-10 shadow-sm ">
+			<h1 className="py-2 text-4xl font-black text-center text-transparent font-product-sans drop-shadow bg-gradient-to-r from-blue-500 to-blue-500 via-green-500 bg-clip-text">
+				Daily Task List
+			</h1>
+			<form
+				action=""
+				className="relative flex items-center w-full max-w-lg gap-4 border border-gray-200 rounded drop-shadow-sm"
+			>
 				<input
 					type="text"
 					value={textValue}
-					className="w-full pl-5 pr-12 text-base border border-gray-400 rounded"
+					className="w-full pl-5 pr-12 text-base border-0 rounded"
 					placeholder="What is your task?"
 					onChange={handleInputChange}
 				/>
 				<button
 					type="button"
-					className=" absolute right-[1px] grid w-10 h-10 top-[1px] text-white align-middle bg-blue-600 border rounded border-gray-50 hover:bg-blue-800 place-items-center"
+					className="absolute grid w-8 h-8 text-white align-middle bg-blue-600 border rounded right-1 border-gray-50 hover:bg-blue-800 place-items-center"
 					onClick={handleTodoSubmit}
 				>
-					<svg
-						className="w-6 h-6"
-						fill="none"
-						stroke="currentColor"
-						viewBox="0 0 24 24"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<path
-							strokeLinecap="round"
-							strokeLinejoin="round"
-							strokeWidth={2}
-							d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-						/>
+					<svg className="w-6 h-6 transition-all duration-300 hover:scale-105 currentColor">
+						<use xlinkHref="/sprite.svg#plus" />
 					</svg>
 				</button>
 			</form>
-		</>
+		</div>
 	);
 };
 
