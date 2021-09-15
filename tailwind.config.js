@@ -13,6 +13,10 @@ module.exports = {
 				cyan: colors.cyan,
 				orange: colors.orange,
 			},
+			fontFamily: {
+				'product-sans': ['Product Sans', 'sans-serif'],
+				"nunito": ["Nunito", "sans-serif"],
+			},
 		},
 	},
 	variants: {
