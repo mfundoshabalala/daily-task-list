@@ -17,6 +17,7 @@ const Button: React.FC<ButtonProps> = (props) => {
 		<button
 			type="button"
 			onClick={onClick}
+			aria-label={title}
 			className={classNames(
 				className,
 				'px-2 py-1 border rounded drop-shadow-md active:drop-shadow-sm'
